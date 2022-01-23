@@ -1,35 +1,17 @@
 import pyautogui
-import numpy as nm
-import numpy as nm
-import pytesseract
-import pytesseract
-import cv2
-from PIL import ImageGrab
-import time
-import clipboard
-
-def work():
-    pass
 
 if __name__ == '__main__':
 
-    #pyautogui.click(972, 1050)
-    #pyautogui.click(221, 52)
+    TaskbarPinnedChromeX, TaskbarPinnedChromeY = 972, 1050
+    ChromeAddressBarX, ChromeAddressBarY = 221, 52
 
-    #pyautogui.hotkey('ctrl', 'c')
+    AmazonWebDomain = "https://www.amazon.in/dp/"
+    AmazonAsinCode = "B08D11DZ2W"
 
-    #link = clipboard.paste()
+    ProductLink = AmazonWebDomain + AmazonAsinCode
 
-    #print(link)
+    pyautogui.click(TaskbarPinnedChromeX, TaskbarPinnedChromeY)
+    pyautogui.click(ChromeAddressBarX, ChromeAddressBarY)
 
-    domain = "https://www.amazon.in/dp/"
-    stringend = "/ref=sr_1_3?crid=SCG952C2DPZ0&keywords=tv&qid=1642942576&sprefix=t%2Caps%2C220&sr=8-3&th=1"
-    asin = "B08D11DZ2W"
-
-    newlink = domain + asin + stringend;
-
-    pyautogui.click(972, 1050)
-    pyautogui.click(221, 52)
-
-    pyautogui.write(newlink)
+    pyautogui.write(ProductLink)
     pyautogui.press('enter')    
